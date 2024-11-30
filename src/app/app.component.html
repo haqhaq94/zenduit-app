@@ -1,9 +1,20 @@
 
 <app-header-navbar></app-header-navbar>    
 <div class="container">
-    <app-submissions></app-submissions>
+    <h1>Submissions</h1>
+    <app-filter-view  
+    (searchChange)="searchChange($event)"
+    (statusChange)="statusChange($event)"
+    (formChange)="formChange($event)"
+    (dateChange)="dateChange($event)"
+    (toggleView)="OnToggleView($event)"></app-filter-view>
+    <div *ngIf="viewMode === 'list'" class="list-view">
+        <app-list-view [dataSource]="dataSource" [filteredDataSource]="filteredDataSource"
+       
+        ></app-list-view>
+    </div>
+    <div *ngIf="viewMode === 'map'" style="width: 100% !important;">
+        <app-submissions [submissions]="dataSource.data" [filteredSubmissions]="filteredDataSource.data"></app-submissions>
+    </div>
 </div>
-
-
-
 <router-outlet />
