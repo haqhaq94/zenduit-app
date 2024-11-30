@@ -1,0 +1,29 @@
+.mat-column-select {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    
+    width: 2% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+    word-break: break-word;
+  
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+  }
+  .mat-mdc-header-cell{
+    font-weight: bold !important;
+  }
+
+  
+  .icon-display{
+    transform: scale(0.5);
+    float: left;
+    vertical-align: middle;
+  }
+  .v-align-middle { 
+    vertical-align: middle;
+  }
+
+ 
