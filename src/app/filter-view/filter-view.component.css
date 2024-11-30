@@ -68,3 +68,6 @@
   padding: 0 !important;
   color: blue;
 }
+.custom-select-panel {
+  min-width: 100% !important;
+}
