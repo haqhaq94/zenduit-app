@@ -40,7 +40,7 @@ export const MY_FORMATS = {
 ],
   styleUrl: './filter-view.component.css'
 })
-export class FilterViewComponent implements AfterViewInit{
+export class FilterViewComponent {
   readonly date = new FormControl(moment());
   setMonthAndYear(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>) {
     const ctrlValue = this.date.value ?? moment();
@@ -54,7 +54,7 @@ export class FilterViewComponent implements AfterViewInit{
   @Output() statusChange = new EventEmitter<any | null>(); 
   @Output() dateChange = new EventEmitter<any | null>(); 
   @Output() toggleView = new EventEmitter<number | null>(); 
-  viewMode = "map";
+  viewMode = "list";
   selectedDate: any;
   searchTerm: any;
   selectedForm: any;
@@ -67,10 +67,6 @@ export class FilterViewComponent implements AfterViewInit{
     { value: 0, label: 'Unassigned' },
   ];
   forms = ['denisgordiyenya@gmail.com', 'john.doe@gmail.com', 'alice.smith@gmail.com','zendu@zenduit.com'];
- 
-  ngAfterViewInit(): void {
-   console.log("Asdf");
-  }
     
   exportData() {
     console.log('Exporting data...');

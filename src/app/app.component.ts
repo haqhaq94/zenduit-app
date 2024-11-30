@@ -21,7 +21,7 @@ export class AppComponent {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   filteredDataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   title = 'zenduit-app';
-  viewMode = 'map';
+  viewMode = 'list';
   selectedFrom: string | null = null;
   searchTerm: string | null = null;
   selectedStatus: string | null = null; 

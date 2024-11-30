@@ -16,14 +16,6 @@
     width: 209px;
   }
   
-  
-  
-  .list-view {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
   .submission {
     border: 1px solid #ccc;
     padding: 10px;
@@ -145,10 +137,7 @@
   margin-left: 1%;
   height: 525px;
 }
-::ng-deep .cdk-overlay-pane {
-  width: auto !important;
-  max-width: 100%;
-}
+
 .card-body > p {
   margin: 0;
   margin-bottom: 5px !important;
