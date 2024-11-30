@@ -58,8 +58,8 @@
     <div class="submission" *ngFor="let submission of filteredSubmissions">
        <div class="card-header">
         <span class="card-title">{{ submission.title }}</span>
-        <button [disabled]="submission.status.toLowerCase() === 'needs review'" class="card-status status" [ngClass]="submission.status.toLowerCase()"> 
-          <mat-icon matPrefix >circle</mat-icon>  {{submission.status}}
+        <button [disabled]="submission.status.key.toLowerCase() === 'needs review'" class="card-status status" [ngClass]="submission.status.key.toLowerCase()"> 
+          <mat-icon matPrefix >circle</mat-icon> <p class="content-aligment">  {{submission.status.value}}</p>
         </button>
         
         </div>
@@ -76,9 +76,10 @@
       <div class="submission" *ngFor="let submission of filteredSubmissions">
         <div class="card-header">
          <span class="card-title">{{ submission.title }}</span>
-         <button [disabled]="submission.status.toLowerCase() === 'needs review'" class="card-status status" [ngClass]="submission.status.toLowerCase()"> 
-          <mat-icon matPrefix >circle</mat-icon> {{submission.status}}
-         </button>
+          <div  class="status" [ngClass]="submission.status.key.toLowerCase().trim()">
+            <mat-icon class="icon-display">circle</mat-icon>
+            <span class="v-align-middle">{{submission.status.value}}</span>
+          </div>
          
          </div>
          <div class="card-body">
