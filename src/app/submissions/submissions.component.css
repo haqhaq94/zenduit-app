@@ -1,0 +1,169 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+  body{
+    margin: 0 !important;
+  }
+  .toggle-field {
+    width:79px;
+  }
+  
+  .search-box {
+   width: 334px;
+  }
+  
+  .filter-field {
+    width: 209px;
+  }
+  
+  
+  
+  .list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .submission {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom:5px;
+    height: 100px;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 3px;
+    
+  }
+  
+  .status.complete {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #155724;
+  }
+  
+  .status.uncomplete {
+    background-color: #f8d7da;
+    color: red;
+    border: 1px solid red;
+  }
+  .box-list{
+    width: 409px;
+  }
+  .map-container {
+    width: 100%;
+    height: 400px;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  .card-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .card-body {
+    list-style: none;
+    padding: 0;
+    font-size: 85% !important;
+    line-height: normal;
+    width: 60%;
+  }
+  
+  .title{
+    text-align: left;
+    width: 100%;
+  }
+
+  .responsive-inputs {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping on smaller screens */
+    gap: 15px; /* Adds spacing between the fields */
+
+  }
+  .second-group{
+    margin-left: 5% !important;
+    margin-bottom: 1% !important;
+  }
+  .input-field {
+    flex: 1 1 calc(20% - 15px); /* 20% width per field with gap adjustment */
+    min-width: 150px; /* Ensures fields don't shrink too much */
+  }
+  
+  .mat-button-toggle-group {
+    height: 40px !important;
+    align-items: center;
+    padding: 0 !important;
+  }
+  
+
+  .mat-form-field{
+    height: 40px;
+}
+  ::ng-deep .mat-mdc-form-field-infix { 
+    height: 40px !important;
+    width: 120px !important;
+  }
+  
+    ::ng-deep .mat-mdc-form-field-flex{ /* for input control*/
+      height: 40px !important;
+    }
+  
+    ::ng-deep .mdc-notched-outline{
+      height: 40px !important;
+    }
+  
+    ::ng-deep .mat-mdc-text-field-wrapper{
+      height: 40px !important;
+    }
+    ::ng-deep .mat-mdc-floating-label{
+      padding-bottom: 10px;
+    }
+  ::ng-deep .mdc-text-field--outlined .mat-mdc-form-field-infix, .mdc-text-field--no-label .mat-mdc-form-field-infix{
+    height: 20px !important;
+    padding-top: 10px !important;
+  }
+  .mat-form-field input{
+      background: blue;
+  }
+.responsive-inputs > a{
+  padding: 0 !important;
+  color: blue;
+}
+.mat-button-toggle-appearance-standard.mat-button-toggle-checked{
+  color: white !important;
+  background-color: #2188d9 !important;
+}
+.gray{
+  color: #B8B9BC;
+  float: left;
+  margin-right: 3%;;
+}
+.highlight{
+  color:#ff3d00;
+  font-weight: bold;
+}
+.space-adjustment{
+  margin-left: 0;
+}
+.box-map{
+  width:80% ;
+  margin-left: 1%;
+  height: 670px;
+}
+::ng-deep .cdk-overlay-pane {
+  width: auto !important;
+  max-width: 100%;
+}
+.card-body > p {
+  margin: 0;
+  margin-bottom: 5px !important;
+}
