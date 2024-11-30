@@ -32,3 +32,13 @@
     background-color: #ececed;
     color:#b8b9bc
   }
+  .custom-select-panel {
+    min-width: 100% !important;
+    width: var(--select-width) !important;
+  }
+  .mat-mdc-option {
+    white-space: nowrap !important; 
+    overflow: hidden !important; 
+    text-overflow: ellipsis !important;
+    display: block !important; 
+  }
