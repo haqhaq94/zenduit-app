@@ -199,7 +199,7 @@ export class SubmissionsComponent implements AfterViewInit {
     setTimeout(() => {
       if ( !this.map ){
       const platform = new H.service.Platform({
-        apikey: ''//'7dtFWhJg14FLwTVo_eg5dy15SGkxMZgLGcNTSLPhsIo'
+        apikey: '7dtFWhJg14FLwTVo_eg5dy15SGkxMZgLGcNTSLPhsIo'
       });
       const layers = platform.createDefaultLayers();
       const map = new H.Map(
