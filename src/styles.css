@@ -11,4 +11,24 @@
 
   }
   
+  .status {
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 8px;
+  }
   
+  .status.lowrisk {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #155724;
+  }
+  
+  .status.uncomplete {
+    background-color: #f8d7da;
+    color: red;
+    border: 1px solid red;
+  }
+  .status.unassigned {
+    background-color: #ececed;
+    color:#b8b9bc
+  }
