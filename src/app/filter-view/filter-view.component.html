@@ -11,9 +11,9 @@
     </mat-form-field>
   
   
-    <mat-form-field appearance="outline" class="filter-field">
+    <mat-form-field appearance="outline" class="filter-field" >
       <mat-label>Select From</mat-label>
-      <mat-select [(ngModel)]="selectedForm" (selectionChange)="onFormChange()" >
+      <mat-select [(ngModel)]="selectedForm" (selectionChange)="onFormChange()"  panelClass="custom-select-panel-from">
         <mat-option [value]="null">None</mat-option>
         <mat-option *ngFor="let form of forms" [value]="form">{{ form }}</mat-option>
       </mat-select>
