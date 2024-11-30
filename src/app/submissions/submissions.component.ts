@@ -99,7 +99,7 @@ export class SubmissionsComponent implements AfterViewInit {
   selectedForm: string | null = null;
   searchTerm: string | null = null;
   selectedStatus: string | null = null; 
-  addedMarkers : H.map.Marker[] = [];
+  
   selectedDate: Date | null = null;
   submissions = [
     {
@@ -174,12 +174,10 @@ export class SubmissionsComponent implements AfterViewInit {
     });
   }
   addMarkers(map : any): void {
-    this.addedMarkers = [];
+   
     this.filteredSubmissions.forEach((markerData) => {
       const marker = new H.map.Marker({ lat: markerData.coordinates.lat, lng: markerData.coordinates.lng });
-      
       marker.setIcon(this.icon);
-      this.addedMarkers.push(marker);
       map.addObject(marker);
     });
   }
@@ -197,7 +195,6 @@ export class SubmissionsComponent implements AfterViewInit {
   }
   renderMap(container: HTMLElement){
     setTimeout(() => {
-      if ( !this.map ){
       const platform = new H.service.Platform({
         apikey: '7dtFWhJg14FLwTVo_eg5dy15SGkxMZgLGcNTSLPhsIo'
       });
@@ -216,16 +213,10 @@ export class SubmissionsComponent implements AfterViewInit {
   
      
       H.ui.UI.createDefault(map, layers);
-      
+       this.map = map;
       onResize(container, () => {
         map.getViewPort().resize();
       }); 
-      this.map = map;
-    }
-    
-    this.addedMarkers.forEach(marker => {
-      this.map?.removeObject(marker);
-    });
     this.addMarkers(this.map);
      
     }, 1000);
