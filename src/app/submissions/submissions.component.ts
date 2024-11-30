@@ -86,16 +86,9 @@ export class SubmissionsComponent implements AfterViewInit {
     icon = new H.map.Icon(this.svg, {
       anchor: { x: 24, y: 58 } // x: center horizontally, y: slightly below the bottom tip of the marker
   });
-  forms = ['denisgordiyenya@gmail.com', 'john.doe@gmail.com', 'alice.smith@gmail.com','alice.smith@gmail.com'];
+  forms = ['denisgordiyenya@gmail.com', 'john.doe@gmail.com', 'alice.smith@gmail.com'];
   statuses = ['Uncomplete', 'Complete', 'Needs Review'];
-  markers: { lat: number; lng: number; title: string }[] = [
-    { lat: 43.6707974, lng: -79.347015, title: 'Marker 1' },
-    { lat: 43.653908, lng: -79.384293, title: 'Marker 2' },
-    { lat: 43.662301, lng: -79.329356, title: 'Marker 3' },
-    { lat: 43.662301, lng: -79.395293, title: 'Marker 4' },
-    { lat: 43.663213 , lng: -79.387359, title: 'Marker 5' },
-    
-  ];
+  
   selectedForm: string | null = null;
   searchTerm: string | null = null;
   selectedStatus: string | null = null; 
@@ -195,6 +188,7 @@ export class SubmissionsComponent implements AfterViewInit {
   }
   renderMap(container: HTMLElement){
     setTimeout(() => {
+      container.innerHTML = "";
       const platform = new H.service.Platform({
         apikey: '7dtFWhJg14FLwTVo_eg5dy15SGkxMZgLGcNTSLPhsIo'
       });
