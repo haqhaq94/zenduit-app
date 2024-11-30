@@ -1,7 +1,7 @@
 [build]
     base = "zenduit-app"
     command = "npm run build --configuration production"
-    publish = "dist/browser"
+    publish = "dist/zenduit-app/browser"
 
     [[redirects]]
     from = "/*"
