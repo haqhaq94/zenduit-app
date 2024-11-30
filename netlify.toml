@@ -1,9 +1,0 @@
-[build]
-    base = "zenduit-forms"
-    command = "npm run build --configuration production"
-    publish = "dist/zenduit-forms/browser"
-
-    [[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status  = 200
