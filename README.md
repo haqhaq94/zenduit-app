@@ -29,12 +29,10 @@ ng generate --help
 ## Building
 
 To build the project run:
-
 ```bash
-ng build has been deprected since Angular 14 use
 ng build --configuration production
 ```
-
+**Note**: ng build has been deprected since Angular 14 use
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
 ## Running unit tests
