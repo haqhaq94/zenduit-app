@@ -1,5 +1,5 @@
 [build]
-    base = "zenduit-app"
+    base = "zenduit-forms"
     command = "npm run build --configuration production"
     publish = "dist/zenduit-forms/browser"
 
