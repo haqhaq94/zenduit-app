@@ -13,7 +13,7 @@
   
     <mat-form-field appearance="outline" class="filter-field">
       <mat-label>Select From</mat-label>
-      <mat-select [(ngModel)]="selectedForm" (selectionChange)="onFormChange()"  panelClass="custom-select-panel">>
+      <mat-select [(ngModel)]="selectedForm" (selectionChange)="onFormChange()"  >
         <mat-option [value]="null">None</mat-option>
         <mat-option *ngFor="let form of forms" [value]="form">{{ form }}</mat-option>
       </mat-select>
@@ -22,7 +22,7 @@
   
     <mat-form-field appearance="outline" class="filter-field status-filter">
       <mat-label>Select Status</mat-label>
-      <mat-select [(ngModel)]="selectedStatus" (selectionChange)="onStatusChange()">
+      <mat-select [(ngModel)]="selectedStatus" (selectionChange)="onStatusChange()" panelClass="custom-select-panel" >
         <mat-option [value]="null">None</mat-option>
         <mat-option *ngFor="let status of statusOptions" [value]="status.value">{{ status.label }}</mat-option>
       </mat-select>
